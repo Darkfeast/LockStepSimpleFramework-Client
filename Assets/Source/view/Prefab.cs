@@ -11,16 +11,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class prefab {
-    // Use this for initialization
-    void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+public class Prefab {
 
     public static GameObject create(string path, UnityObject obj, GameObject parentObj = null)
     {
