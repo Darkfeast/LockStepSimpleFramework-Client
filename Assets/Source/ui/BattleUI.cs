@@ -30,7 +30,7 @@ public class BattleUI : MonoBehaviour {
         btnSendSoldier = btnSendSoldier.GetComponent<Button>();
         btnEndBattle = btnEndBattle.GetComponent<Button>();
         btnReplay = btnReplay.GetComponent<Button>();
-        var txtAdjustSpeed = btnAdjustSpeed.transform.FindChild("Text").GetComponent<Text>();
+        var txtAdjustSpeed = btnAdjustSpeed.transform.Find("Text").GetComponent<Text>();
         btnAdjustSpeed = btnAdjustSpeed.GetComponent<Button>();
         textResult = textResult.GetComponent<Text>();
 

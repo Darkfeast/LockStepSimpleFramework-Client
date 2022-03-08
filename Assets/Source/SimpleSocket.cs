@@ -14,9 +14,10 @@ public class SimpleSocket {
     // Use this for initialization
     public void Init () {
         Console.WriteLine("Hello World!");
+        UnityTools.Log(GetType()+"  Init");
         //创建实例
         socketClient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-        IPAddress ip = IPAddress.Parse("192.168.0.140");
+        IPAddress ip = IPAddress.Parse("192.168.1.58");
         IPEndPoint point = new IPEndPoint(ip, 2333);
         //进行连接
         socketClient.Connect(point);
