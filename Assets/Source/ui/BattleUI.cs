@@ -40,7 +40,7 @@ public class BattleUI : MonoBehaviour {
         //开始战斗
         btnStartBattle.onClick.AddListener(delegate ()
         {
-            textResult.text = "服务器校验结果:--";
+            textResult.text = "校验结果:--";
             GameData.g_bRplayMode = false;
             battleLogic.startBattle();
         });
@@ -70,17 +70,17 @@ public class BattleUI : MonoBehaviour {
             if (Time.timeScale == 1)
             {
                 Time.timeScale = 2;
-                txtAdjustSpeed.text = "2倍速";
+                txtAdjustSpeed.text = "x2";
             }
             else if (Time.timeScale == 2)
             {
                 Time.timeScale = 4;
-                txtAdjustSpeed.text = "4倍速";
+                txtAdjustSpeed.text = "x4";
             }
             else if (Time.timeScale == 4)
             {
                 Time.timeScale = 1;
-                txtAdjustSpeed.text = "1倍速";
+                txtAdjustSpeed.text = "x1";
             }
         });
     }
@@ -91,11 +91,11 @@ public class BattleUI : MonoBehaviour {
         {
             if (BattleLogic.s_uGameLogicFrame == int.Parse(m_scServerInfo))
             {
-                textResult.text = "服务器校验成功";
+                textResult.text = "校验成功";
             }
             else
             {
-                textResult.text = "服务器校验失败";
+                textResult.text = "校验失败";
             }
 
             m_scServerInfo = "";
